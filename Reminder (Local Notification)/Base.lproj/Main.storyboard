@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WMS-K1-Pt8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reminder__Local_Notification_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BJV-n4-9G1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1069.2307692307693" y="3.5545023696682461"/>
+        </scene>
+        <!--Add Reminder Controller-->
+        <scene sceneID="Ozj-Jt-Mcm">
+            <objects>
+                <viewController storyboardIdentifier="add" id="Vq7-Gx-kZL" customClass="AddReminderController" customModule="Reminder__Local_Notification_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wAc-Pq-meC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-ZA-scZ">
+                                <rect key="frame" x="10" y="57" width="370" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="8mo-OP-2vl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter body" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kSo-5y-8O9">
+                                <rect key="frame" x="10" y="129" width="370" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="k9x-vn-Y90"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="gF6-wo-hPZ">
+                                <rect key="frame" x="10" y="191" width="390" height="609"/>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mSX-OZ-SJu"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="gF6-wo-hPZ" firstAttribute="top" secondItem="kSo-5y-8O9" secondAttribute="bottom" constant="10" id="9mL-Ua-PwS"/>
+                            <constraint firstItem="mSX-OZ-SJu" firstAttribute="trailing" secondItem="pjL-ZA-scZ" secondAttribute="trailing" constant="10" id="Ajp-eL-FJK"/>
+                            <constraint firstItem="gF6-wo-hPZ" firstAttribute="leading" secondItem="wAc-Pq-meC" secondAttribute="leading" constant="10" id="IYO-Ni-r3z"/>
+                            <constraint firstItem="kSo-5y-8O9" firstAttribute="top" secondItem="pjL-ZA-scZ" secondAttribute="bottom" constant="20" id="TVS-DL-OTU"/>
+                            <constraint firstItem="pjL-ZA-scZ" firstAttribute="top" secondItem="mSX-OZ-SJu" secondAttribute="top" constant="10" id="XRd-pz-cve"/>
+                            <constraint firstItem="mSX-OZ-SJu" firstAttribute="bottom" secondItem="gF6-wo-hPZ" secondAttribute="bottom" constant="10" id="YOI-Jg-zaA"/>
+                            <constraint firstItem="pjL-ZA-scZ" firstAttribute="leading" secondItem="mSX-OZ-SJu" secondAttribute="leading" constant="10" id="aJM-M8-qcQ"/>
+                            <constraint firstAttribute="trailing" secondItem="gF6-wo-hPZ" secondAttribute="trailing" constant="-10" id="f38-hE-BhL"/>
+                            <constraint firstItem="mSX-OZ-SJu" firstAttribute="trailing" secondItem="kSo-5y-8O9" secondAttribute="trailing" constant="10" id="mJc-zv-FAr"/>
+                            <constraint firstItem="kSo-5y-8O9" firstAttribute="leading" secondItem="mSX-OZ-SJu" secondAttribute="leading" constant="10" id="yO2-oW-wPW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bodyField" destination="kSo-5y-8O9" id="Upe-OO-RQ7"/>
+                        <outlet property="datePicker" destination="gF6-wo-hPZ" id="X9D-RS-XwD"/>
+                        <outlet property="titleField" destination="pjL-ZA-scZ" id="hAY-Jj-maT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHh-zv-UaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1777" y="4"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="KHd-3n-eoQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WMS-K1-Pt8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="17T-t6-2dT">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FWC-t9-whp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXg-zx-U8w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
